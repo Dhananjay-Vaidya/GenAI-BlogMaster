@@ -10,7 +10,7 @@ export default function Home() {
             Generate AI-powered content instantly. Just enter a topic and let AI do the magic! 🚀
           </p>
 
-          <div className="mt-6 flex justify-center space-x-4">
+          <div className="mt-6 flex justify-center items-center flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
             <Link to="/generate">
               <button className="btn">Start Generating 🚀</button>
             </Link>

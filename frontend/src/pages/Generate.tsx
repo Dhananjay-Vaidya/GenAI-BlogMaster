@@ -85,6 +85,19 @@ export default function Generate() {
               </button>
             </div>
           )}
+          <div className="sample-prompts mt-6">
+              <h2 className="text-xl font-semibold text-[#DA70D6]">💡 Sample Prompts</h2>
+              <p className="text-gray-300 mt-2">Try these prompt ideas for best results:</p>
+
+              <ul className="prompt-list">
+                <li>📝 "Write an engaging blog about the future of AI in business."</li>
+                <li>📖 "Summarize the book 'Atomic Habits' in 200 words."</li>
+                <li>🎭 "Generate a creative short story about space exploration."</li>
+                <li>📊 "Explain machine learning to a 10-year-old."</li>
+                <li>📰 "Provide the latest trends in digital marketing for 2025."</li>
+                <li>🔬 "Describe the impact of quantum computing on cybersecurity."</li>
+              </ul>
+          </div>
         </div>
       </div>
     </div>

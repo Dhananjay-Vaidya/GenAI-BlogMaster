@@ -22,10 +22,6 @@ export default function About() {
             A <strong>chatbot UI</strong> is the <strong>interactive</strong> part of a chatbot that users see and interact with.
             It includes <strong>text, buttons, and navigation elements</strong> to ensure smooth conversations.
           </p>
-
-          <p className="mt-6 text-gray-400">
-            Created by <strong>Dhananjay</strong> 🚀 | Open Source & AI-powered!
-          </p>
         </div>
       </div>
     </div>
