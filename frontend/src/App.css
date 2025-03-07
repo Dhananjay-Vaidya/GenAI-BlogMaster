@@ -1,9 +1,14 @@
-*{
-  max-width: 100%;
-  margin: 0 auto;
+* {
+  margin: 0;
   padding: 0;
-  text-align: center;
   box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  color: white;
+  overflow-x: hidden; /* Prevents horizontal scroll */
 }
 
 .logo {
@@ -36,14 +41,15 @@
 
 .navbar {
   width: 100vw;
-  height: 4vw;
-  background-color: #1E1E1E; /* Dark Gray */
-  color: #F5F5F5; /* White Text */
+  height: 6vw;
+  background-color: #1E1E1E; 
+  color: #F5F5F5; 
   display: flex;
-  justify-content: space-between; /* Align Items */
-  padding:40px 30px;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 10px 30px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  position: fixed; /* Fix Navbar to Top */
+  position: fixed;
   top: 0;
   left: 0;
   overflow: hidden;
@@ -53,14 +59,13 @@
 .navbar .logo {
   font-size: 22px;
   font-weight: bold;
-  color: #DA70D6; /* Soft Lavender */
+  color: #DA70D6; 
 }
 
 .navbar .nav-links {
-  float: right;
   display: flex;
   gap: 20px;
-  margin-right: 0;
+  margin-left: auto;  
 }
 
 .navbar .nav-links a {
@@ -137,22 +142,26 @@
 }
 
 .generate-page {
+  background: url('images/generate.jpeg') no-repeat center center/cover;
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
+  width: 160vw; 
+  min-height: 100vh; 
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  padding-top: 6vw;
+  align-items: center;
+  padding-top: 6vw; 
 }
 
 .generate-container {
-  width: 90%;
-  max-width: 800px;
-  background: rgba(30, 30, 30, 0.85);
-  padding: 20px;
+  background: rgba(30, 30, 30, 0.85); 
+  padding: 60px;
   border-radius: 10px;
   text-align: center;
-  color: #F5F5F5;
+  max-width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 textarea, input {

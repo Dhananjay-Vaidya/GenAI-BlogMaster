@@ -44,46 +44,48 @@ export default function Generate() {
 
   return (
     <div className="generate-page">
-      <div className="generate-container">
-        <h1 className="text-3xl font-bold text-[#DA70D6] text-center">
-          AI Content Generator
-        </h1>
+      <div className="generate-overlay">
+        <div className="generate-container">
+          <h1 className="text-3xl font-bold text-[#DA70D6] text-center">
+            AI Content Generator
+          </h1>
 
-        <textarea
-          className="generate-textarea"
-          placeholder="Enter a topic..."
-          value={prompt}
-          onChange={(e) => setPrompt(e.target.value)}
-          rows={3}
-        />
+          <textarea
+            className="generate-textarea"
+            placeholder="Enter a topic..."
+            value={prompt}
+            onChange={(e) => setPrompt(e.target.value)}
+            rows={3}
+          />
 
-        <button onClick={handleGenerate} className="btn" disabled={loading}>
-          {loading ? <Loader2 className="animate-spin h-5 w-5 mr-2" /> : "Generate 🚀"}
-        </button>
+          <button onClick={handleGenerate} className="btn" disabled={loading}>
+            {loading ? <Loader2 className="animate-spin h-5 w-5 mr-2" /> : "Generate 🚀"}
+          </button>
 
-        {error && <p className="text-red-500 mt-4 text-center">{error}</p>}
+          {error && <p className="text-red-500 mt-4 text-center">{error}</p>}
 
-        {generatedText && (
-          <div className="generated-content">
-            <h2 className="text-lg font-semibold">Generated Content:</h2>
-            <p className="mt-2">{generatedText}</p>
+          {generatedText && (
+            <div className="generated-content">
+              <h2 className="text-lg font-semibold">Generated Content:</h2>
+              <p className="mt-2">{generatedText}</p>
 
-            <button
-              onClick={() => {
-                navigator.clipboard.writeText(generatedText);
-                setCopied(true);
-                setTimeout(() => setCopied(false), 2000);
-              }}
-              className="copy-btn"
-            >
-              {copied ? (
-                <CheckCircle className="h-5 w-5 text-green-500" />
-              ) : (
-                <Clipboard className="h-5 w-5 text-gray-300" />
-              )}
-            </button>
-          </div>
-        )}
+              <button
+                onClick={() => {
+                  navigator.clipboard.writeText(generatedText);
+                  setCopied(true);
+                  setTimeout(() => setCopied(false), 2000);
+                }}
+                className="copy-btn"
+              >
+                {copied ? (
+                  <CheckCircle className="h-5 w-5 text-green-500" />
+                ) : (
+                  <Clipboard className="h-5 w-5 text-gray-300" />
+                )}
+              </button>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
